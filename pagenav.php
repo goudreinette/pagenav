@@ -19,7 +19,8 @@ if (!is_admin())
 function pagenav_load ()
 {
   wp_enqueue_style('pagenav.css', plugin_dir_url( __FILE__ ) . 'pagenav.css');
-  wp_enqueue_script('jquery-nearest.js', plugin_dir_url( __FILE__ ) . 'jquery-nearest.js', null, null, true);
+  wp_enqueue_script('jquery-nearest.js', plugin_dir_url( __FILE__ ) . 'deps/jquery-nearest.js', null, null, true);
+  wp_enqueue_script('velocity.js', plugin_dir_url( __FILE__ ) . 'deps/velocity.js', null, null, true);
   wp_enqueue_script('pagenav.js', plugin_dir_url( __FILE__ ) . 'pagenav.js', null, null, true);
 }
 
