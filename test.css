@@ -1,0 +1,8 @@
+.section:nth-child(odd) {
+    background-color: #eee;
+    height: 500px
+}
+
+.section:nth-child(even) {
+    height: 300px
+}

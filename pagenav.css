@@ -1,0 +1,95 @@
+/**
+ * Pagenav
+ */
+#pagenav {
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+  max-height: 43px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  top: 0;
+  background-color: rgba(70, 70, 70, 0.9);
+  color: #ddd;
+
+  /* Ease Out Quad */
+  -webkit-transition: all 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) !important;
+  transition: all 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) !important;
+}
+
+#pagenav #current-row {
+  opacity: 0;
+  display: none;
+}
+
+#pagenav #logo {
+position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  background-image: url('http://dev.hansvanderwoerd.eu/wp-content/uploads/2014/12/bootje_klein.png');
+  background-size: contain;
+}
+
+#pagenav .item {
+	padding: 8px 7px;
+	cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'GT-Walsheim-Web';
+    font-size: 15px;
+    line-height: 20px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0);
+}
+
+#pagenav .item:hover {
+border-bottom: 3px solid rgba(113, 216, 196, 0.8);
+}
+
+#pagenav .item.current {
+border-bottom: 3px solid rgba(113, 216, 196, 0.8);
+}
+
+/* Hidden */
+#pagenav.hidden {
+  opacity: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  #pagenav {
+    padding-top: 50px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    overflow: hidden;
+    max-height: 1000px !important;
+    cursor: pointer;
+  }
+  #pagenav:not(.expanded){
+    max-height: 0px !important;
+  }
+  #pagenav #current-row {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 55px;
+    opacity: 1;
+    font-weight: bold;
+  }
+  #pagenav .item {
+    width: 100%;
+  }
+  #pagenav .item.current {
+    border: none;
+  }
+}
