@@ -1,8 +1,8 @@
-.section:nth-child(odd) {
+.vc_row:nth-child(odd) {
     background-color: #eee;
     height: 500px
 }
 
-.section:nth-child(even) {
+.vc_row:nth-child(even) {
     height: 300px
 }
