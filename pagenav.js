@@ -38,11 +38,12 @@
         new: function _new() {
             // Create new object that delegates to View
             var v = Object.create(View);
-            // Get sections (elements with .vc_row:not(.toprow) class)
-            v.$sections = $('.vc_row:not(.toprow)');
 
             // Sailing fix: duplicate rows
-            $('product-after-summary').empty()
+            $('.product-after-summary').empty()
+
+            // Get sections (elements with .vc_row:not(.toprow) class)
+            v.$sections = $('.vc_row:not(.toprow)');
 
             // Construct and append html
             $('body').append('<div id="pagenav"><div id="logo"></div><div id=\'current-row\'></div></div>');
