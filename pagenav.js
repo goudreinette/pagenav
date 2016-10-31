@@ -1,5 +1,4 @@
 (function () {
-    'use strict';
     /**
     * [Model holds the "component's" state]
     */
@@ -41,6 +40,10 @@
             var v = Object.create(View);
             // Get sections (elements with .vc_row:not(.toprow) class)
             v.$sections = $('.vc_row:not(.toprow)');
+
+            // Sailing fix: duplicate rows
+            $('product-after-summary').empty()
+
             // Construct and append html
             $('body').append('<div id="pagenav"><div id="logo"></div><div id=\'current-row\'></div></div>');
             $('#pagenav').append('<div id="top" class="item">top</div>');
